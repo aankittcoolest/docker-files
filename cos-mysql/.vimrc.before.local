@@ -1,0 +1,33 @@
+set encoding=utf-8
+
+set statusline+=%*
+
+let g:syntastic_always_poplulate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = { "type": "style" }
+nnoremap / /\v
+vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
+
+"Enable powerline fonts | Add some fanciness to tabs
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme='powerlineish'
+
+"Remove mapping for arrow keys
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+
+colorscheme desert
+set nospell
+imap jj <esc>
+noremap <Space> !!bash<CR>
+noremap gt <C-w>
+vnoremap <C-n> :norm
+set ts=8
